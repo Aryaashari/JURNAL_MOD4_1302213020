@@ -1,30 +1,19 @@
-﻿class KodeBuah
+﻿using modul4_1302213020;
+
+class Program
 {
-    static Dictionary<string, string> Kamus = new Dictionary<string, string>() {
-        {"Apel","A00"},
-        {"Aprikot","B00"},
-        {"Alpukat","C00"},
-        {"Pisang","D00"},
-        {"Paprika","E00"},
-        {"Blackberry","F00"},
-        {"Ceri","H00"},
-        {"Kelapa","I00"},
-        {"Jagung","J00"},
-        {"Kurma","K00"},
-        {"Durian","L00"},
-        {"Anggur","M00"},
-        {"Melon","N00"},
-        {"Semangka","O00"},
-    };
-
-    public string getKodeBuah(string buah)
+    public static void Main()
     {
-        if (Kamus.ContainsKey(buah))
-        {
-            return Kamus[buah];
-        }
+        KodeBuah buah = new KodeBuah();
+        Console.WriteLine(buah.getKodeBuah("Apel"));
+        Console.WriteLine(buah.getKodeBuah("Alpukat"));
+        Console.WriteLine(buah.getKodeBuah("Durian"));
+        Console.WriteLine(buah.getKodeBuah("Semangka"));
+        Console.WriteLine(buah.getKodeBuah("Kelapa"));
 
-        return "Kode buah not found!";
+        PosisiKarakterGame posisi = new PosisiKarakterGame();
+            
+        posisi.TombolW();
+        posisi.TombolX();
     }
-
 }
